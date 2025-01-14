@@ -1,4 +1,4 @@
- // JavaScript functionality
+  // JavaScript functionality
  let cart = {};
 //Adding to the cart
  function addToCart(product, price) {
