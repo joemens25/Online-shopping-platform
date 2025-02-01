@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shopping Platform</title>
+<link rel="stylesheet" href="shoping_cart.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Online Shopping Platform</h1>
+    </header>
+    <div class="containner">
+  <div class="product">
+    <img class="image" src="shoe1.png" alt="">
+    <p>Firenze</p>
+    <p>GHS 450.00</p>
+    <button onclick="addToCart('Firenze', 450)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    
+    <img class="image" src="shoe2.png" alt="">
+    <p>Description 2</p>
+    <p>GHS 550.00</p>
+    <button onclick="addToCart('Product 2', 550)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="shoe3.png" alt="">
+    <p>Description 3</p>
+    <p>GHS 365.00</p>
+    <button onclick="addToCart('Product 3', 365)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="shoe4.png" alt="">
+    <p>Park Avenue toe-lace-shoe</p>
+    <p>GHS 570.00</p>
+    <button onclick="addToCart('Park Avenue toe-lace-shoe', 570)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="slippers.png" alt="">
+    <p>Description 5</p>
+    <p>GHS 120.00</p>
+    <button onclick="addToCart('Product 5', 120)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+</div>
+
+<div class="containner">
+  <div class="product">
+    <img class="image" src="slippers2.png" alt="">
+    <p>Description 6</p>
+    <p>GHS 120.99</p>
+    <button onclick="addToCart('Product 6', 120.99)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="slippers3.png" alt="">
+    <p>Description 7</p>
+    <p>GHS 115.00</p>
+    <button onclick="addToCart('Product 7', 115)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="slippers4.png" alt="">
+    <p>Description 8</p>
+    <p>GHS 110.00</p>
+    <button onclick="addToCart('Product 8', 110)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="slippers5.png" alt="">
+    <p>Description 9</p>
+    <p>GHS 120.99</p>
+    <button onclick="addToCart('Product 9', 129)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="slippers6.png" alt="">
+    <p>Description 10</p>
+    <p>GHS 89.00</p>
+    <button onclick="addToCart('Product 10', 89)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+</div>
+
+
+<div class="containner">
+  <div class="product">
+    <img class="image" src="slippers7.png" alt="">
+    <p>Description 11</p>
+    <p>GHS 50.00</p>
+    <button onclick="addToCart('Product 11', 50)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="slippers8.png" alt="">
+    <p>Description 12</p>
+    <p>GHS 55.00</p>
+    <button onclick="addToCart('Product 12', 55)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="slippers9.png" alt="">
+    <p>Description 13</p>
+    <p>GHS 65.00</p>
+    <button onclick="addToCart('Product 13', 65)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="slippers10.png" alt="">
+    <p>Description 14</p>
+    <p>GHS 70.00</p>
+    <button onclick="addToCart('Product 14', 70)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img class="image" src="slippers11.png" alt="">
+    <p>Description 15</p>
+    <p>GHS 89.00</p>
+    <button onclick="addToCart('Product 15', 89)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+</div>
+  <div class="shoppingCart">
+    <div class="cart">
+      <h3>Shopping Cart</h3>
+      <div id="cart-items">cart items:</div>
+      <p>Total: GHS <span id="cart-total">0.00</span></p>
+      <div class="btn">
+        <button id="close" class="close" onclick="clearCart()">Close</button>
+        <button id="checkout" class="checkOut">Proceed</button>
+      </div>
+    </div>
+  </div>
+ <input type="text" class="search" placeholder="Search for product " id="search-bar" onkeyup="searchProducts()"> 
+  <script src="script.js"></script>
+</body>
+</html>
+
