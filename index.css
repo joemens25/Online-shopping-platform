@@ -12,6 +12,17 @@ header {
     font-size: 1.5rem;
 }
 
+
+  header .home{
+    width: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    margin-top: 0px;
+    position: absolute;
+    top: 60px;
+
+  }
   .cart{
     border: 1px solid #ccc;
     padding: 10px;
@@ -26,6 +37,11 @@ header {
     top: 22%;   
     width: cal(33.333% - 40px);
   }
+  @media(max-width: 768px){
+  .cart{
+    width: 100%;
+  }
+  }
   .cart input[type="number"]{
 width: 50%;
 text-align: center;
@@ -34,6 +50,12 @@ text-align: center;
     position: absolute;
     top: 5%;
   }
+  @media(max-width: 768px){
+    .shoppingcart{
+      width: 100%;
+    }
+    }
+  
   .increment-btn{
     cursor: pointer;
     color: green;
@@ -79,9 +101,11 @@ text-align: center;
   
   }
   .item {
-    border: 1px solid #ddd;
-    padding: 10px;
+    background-color: #eff2f5;
+    border: none;
+    width: 50px;
     border-radius: 7px;
+    padding: 20px;
     margin: 6px;
     max-width: 300px;
     box-sizing: border-box;
@@ -114,9 +138,9 @@ button{
 }
 
 .search{
-  width: 200px;
+  width: 400px;
   height: 30px;
-  border-radius: 7px;
+  border-radius: 25px;
   text-align: center;
 }
 .cart-count{

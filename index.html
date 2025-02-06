@@ -10,16 +10,18 @@
 </head>
 <body>
       <!--header elements-->
+      
     <header>
+       <a href="homepage.html"><img class="home" src="icons/home.png" alt=""></a>
         <h1>Online Shopping Platform</h1>
          <!--Search bar to search for a particular item-->
 <input type="text" class="search" placeholder="Search for product " id="search-bar" onkeyup="searchProducts()"> 
 
         <div id="cart-icon" onclick="displayCart()">
-<button id="cart-btn" class="cart-count"><i class="fa-solid fa-cart-shopping"></i> ()</button>
-        </div>
-        <span id="counter">0</span>          
+<button id="cart-btn" class="cart-count"><i class="fa-solid fa-cart-shopping"></i> (<span id="counter"></span>)</button>
+        </div>         
     </header>
+
     <!--container class to contain all the elements and the details of the items-->
     <div class="container">
   <div class="item">
@@ -146,7 +148,7 @@
     </div>
       <div class="btn"><!--button to proceed to buy item(s) or close the shopping cart -->
         <button id="close" class="close" onclick="clearCart()">Close</button>
-        <button id="checkout" class="checkOut">Proceed</button>
+        <a href="homepage.html"><button id="checkout" class="checkOut">Proceed</button></a>
       </div> 
 </div>
   <script src="script.js"></script>

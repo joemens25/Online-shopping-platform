@@ -1,15 +1,19 @@
-let cart = []; // Array to store cart items
-let cartCount = document.getElementById("counter");
-let totalItems = parseInt(cartCount.textContent)
-console.log(totalItems);
-console.log(cartCount);
+let cart = JSON.parse(localStorage.getItem("cart")) || []; // Array to store cart items
+let count = document.getElementById("counter");
+
+let totalitems = localStorage.getItem("count") ||0 ;
+count.textContent = totalitems;
+function updateCount() {
+  totalitems = cart.reduce((sum, item) => sum + item.quantity, 0); // Fix initial value
+  localStorage.setItem("count", totalitems);
+  count.textContent = totalitems;
+}
 // Function to add an item to the cart
 function addToCart(itemName, itemPrice) {
-  updateCartCount();
+  
   // Check if the product is already in the cart
   const existingItem = cart.find(item => item.name === itemName);
   
-
   if (existingItem) {
     // Increase the quantity if the product already exists
     existingItem.quantity++;
@@ -17,30 +21,32 @@ function addToCart(itemName, itemPrice) {
     // Add a new item to the cart with an initial quantity of 1
     cart.push({ name: itemName, price: itemPrice, quantity: 1 });
   }
+  localStorage.setItem("cart", JSON.stringify(cart));
   updateCartDisplay();// Update the cart display
-  
-  console.log(totalItems);
-  
-  
+  updateCount();
+   
 }
 //function to update the cart count 
-function updateCartCount(){totalItems++
-  cartCount.textcontent = totalItems;
-  console.log(totalItems);
-}
+
 // Function to increment the quantity of an item
 function incrementProduct(index) {
-  cart[index].quantity++; // Increment the quantity
+  cart[index].quantity++;
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCount(); 
   updateCartDisplay();
 }
-
 // Function to decrement the quantity of an item
 function decrementProduct(index) {
   if (cart[index].quantity > 1) {
-    cart[index].quantity--; // Decrement the quantity
+    cart[index].quantity--;// Decrement the quantity
+    localStorage.setItem("cart", JSON.stringify(cart)); 
+    updateCount();  
   } else {
     // Remove the item if the quantity is 0
     cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCount();
+
   }
   updateCartDisplay();
 }
@@ -48,6 +54,8 @@ function decrementProduct(index) {
 // Function to remove an item from the cart
 function removeFromCart(index) {
   cart.splice(index, 1); // Remove the item from the cart
+  localStorage.setItem("cart", JSON.stringify(cart))
+  updateCount();
   updateCartDisplay();
 }
 
@@ -84,10 +92,12 @@ function updateCartDisplay() {
   cartTotal.textContent = `${total.toFixed(2)}`;
 }
   //Clear cart or close cart button
- function clearCart() {
-  cart = {};
-  updateCart();
- }
+  function clearCart() {
+    cart = []; // Use empty array, not object
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartDisplay();
+    updateCount();
+  }
 
  // searching for item
  function searchProducts() {
