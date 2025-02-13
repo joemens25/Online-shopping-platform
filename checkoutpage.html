@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="checkoutpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><h1>Checkout <i class="fa-solid fa-cart-shopping"></i></h1></a>
+  </header>
+
+  <main>
+    <h2>Complete Your Purchase</h2>
+    <form id="checkout-form">
+      <fieldset>
+        <legend>Shopping Information</legend>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required aria-required="true" placeholder="Joseph Mensah" aria-label="Full Name">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required aria-required="true" placeholder="alvinjoemens@gmail.com" aria-label="Email Address">
+        <label for="address">Shipping Address:</label>
+        <input type="text" id="address" required aria-required="true" placeholder="123 High Street, Bibiani-Western North" aria-label="Shipping Address">
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment Method</legend>
+        <label for="credit-card"><input type="radio" name="payment" value="Credit Card" required aria-label="Credit Card"> Credit Card</label>
+        <label><input type="radio" name="payment" value="PayPal" required aria-label="PayPal"> PayPal</label>
+        <label><input type="radio" name="payment" value="Mobile Money" required aria-label="Mobile Money"> Mobile Money</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Shopping Summary</legend>
+        <p id="order-summary">Your cart is empty.</p>
+        <p class="total">Total: GHS <span id="totalPrice">0</span></p>
+      </fieldset>
+
+      <button type="submit" aria-label="Complete Checkout">Complete Checkout</button>
+    </form>
+  </main>
+
+  <script src="checkoutpage.js"></script>
+</body>
+</html>

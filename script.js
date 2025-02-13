@@ -26,8 +26,6 @@ function addToCart(itemName, itemPrice) {
   updateCount();
    
 }
-//function to update the cart count 
-
 // Function to increment the quantity of an item
 function incrementProduct(index) {
   cart[index].quantity++;
