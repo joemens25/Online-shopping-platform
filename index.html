@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shopping Platform</title>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<script src="https://kit.fontawesome.com/382b06da31.js" crossorigin="anonymous"></script>
+</head>
+<body>
+      <!--header elements-->
+      
+    <header>
+       <a href="homepage.html"><img class="home" src="icons/home.png" alt=""></a>
+        <h1>Online Shopping Platform</h1>
+         <!--Search bar to search for a particular item-->
+<input type="text" class="search" placeholder="Search for product " id="search-bar" onkeyup="searchProducts()"> 
+
+        <div id="cart-icon" onclick="displayCart()">
+<button id="cart-btn" class="cart-count"><i class="fa-solid fa-cart-shopping"></i> (<span id="counter"></span>)</button>
+        </div>         
+    </header>
+
+    <!--container class to contain all the elements and the details of the items-->
+    <div class="container">
+  <div class="item">
+    <img class="image" src="images/shoe1.png" alt="">
+    <h5>Firenze Fashion Shoe-Black</h5>
+    <p>GHS 450.00</p>
+    <button class="add_to_cart" onclick="addToCart('Firenze Fashion Shoe-Black', 450)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="ima" src="images/shoe2.png" alt="">
+  <h5>Flangesio Fashion Young cool street Casual Sneaker</h5>
+    <p>GHS 550.00</p>
+    <button class="add_to_cart" onclick="addToCart('Flangesio Fashion Young cool street Casual Sneaker', 550)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="image" src="images/shoe3.png" alt="">
+    <h5>Fashion Men Sneaker-Black</h5>
+    <p>GHS 365.00</p>
+    <button class="add_to_cart" onclick="addToCart('Fashion Men Sneaker-Black', 365)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="image" src="images/shoe4.png" alt="">
+    <h5>Park Avenue toe-lace-shoe</h5>
+    <p>GHS 570.00</p>
+    <button class="add_to_cart" onclick="addToCart('Park Avenue toe-lace-shoe', 570)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="image" src="images/slippers.png" alt="">
+    <h5>Catchy cross leather slippers-brown</h5>
+    <p>GHS 120.00</p>
+    <button class="add_to_cart" onclick="addToCart('Catchy cross leather slippers-brown', 120)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+</div>
+<!--container class to contain all the elements and the details of the items-->
+<div class="container">
+  <div class="item">
+    <img class="image" src="images/slippers2.png" alt="">
+    <h5>Zara Catchy Cross Leather Slippers-Black</h5>
+    <p>GHS 120.99</p>
+    <button class="add_to_cart" onclick="addToCart('', 120.99)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="image" src="images/slippers3.png" alt="">
+    <h5>Suede Leader Slippers-Blue & Black</h5>
+    <p>GHS 115.00</p>
+    <button class="add_to_cart" onclick="addToCart('Suede Leader Slippers-Blue & Black', 115)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="images" src="images/slippers4.png" alt="">
+    <h5>Fashion All Black Leather Belt Slippers-Black</h5>
+    <p>GHS 110.00</p>
+    <button class="add_to_cart" onclick="addToCart('Fashion All Black Leather Belt Slippers-Black', 110)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="image" src="images/slippers5.png" alt="">
+    <h5>Fashion Men Crossed Leather Slippers-Green</h5>
+    <p>GHS 120.99</p>
+    <button class="add_to_cart" onclick="addToCart('Fashion Men Crossed Leather Slippers-Green', 129)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="imagess" src="images/slippers6.png" alt="">
+    <h5>Fashion Men Crossed Leather Slippers-Blue Black</h5>
+    <p>GHS 120.59</p>
+    <button class="add_to_cart" onclick="addToCart('Fashion Men Crossed Leather Slippers-Blue Black',120.59)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+</div>
+
+<!--container class to contain all the elements and the details of the items-->
+<div class="container">
+  <div class="item">
+    <img class="image" src="images/slippers7.png" alt="">
+    <h5>Men Black Crossed Leather-Black</h5>
+    <p>GHS 125.00</p>
+    <button class="add_to_cart" onclick="addToCart('Fashion Men Black Crossed Leather-Black', 50)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="imag" src="images/slippers8.png" alt="">
+    <h5>Zera High Quality Leather slippers</h5>
+    <p>GHS 55.00</p>
+    <button class="add_to_cart" onclick="addToCart('Zera High Quality Leather slippers', 55)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="image" src="images/slippers9.png" alt="">
+    <h5>Fashion Classic Men Outdoor Slipppers</h5>
+    <p>GHS 65.00</p>
+    <button class="add_to_cart" onclick="addToCart('Fashion Classic Men Outdoor Slipppers', 65)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="imagess" src="images/slippers10.png" alt="">
+    <h5>Gents Leather Slippers-Black</h5>
+    <p>GHS 70.00</p>
+    <button class="add_to_cart" onclick="addToCart('Gents Leather Slippers-Black', 70)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+
+  <div class="item">
+    <img class="image" src="images/slippers11.png" alt="">
+    <h5>Leather Slippers with buckle-Black</h5>
+    <p>GHS 89.00</p>
+    <button class="add_to_cart" onclick="addToCart('Leather Slippers with buckle-Black', 99.29)"><i class="fa-solid fa-cart-shopping"></i>  Add to Cart</button>
+  </div>
+</div>
+      
+              <!--modal class to hide the shopping cart-->
+      <div class="modal" id="shopping-cart">
+
+
+    <div class="cart"><!--cart class to contain the elements of the shopping cart-->
+      <div class="shoppingCart">
+      <h3>Shopping Cart</h3>
+      <div id="cart-items" class="cart-items">Your cart is empty</div>
+      <p>Total: GHS <span id="cart-total" class="total">0.00</span></p><!--Display the total price of items-->
+      
+    </div>
+      <div class="btn"><!--button to proceed to buy item(s) or close the shopping cart -->
+        <button id="close" class="close" onclick="clearCart()">Close</button>
+        <a href="checkoutpage.html"><button id="checkout" class="checkOut">Proceed</button></a>
+      </div> 
+</div>
+  <script src="script.js"></script>
+  <script src="checkoutpage.js"></script>
+</body>
+</html>
+
+           

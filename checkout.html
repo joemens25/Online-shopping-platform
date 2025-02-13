@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Checkout</h1>
+
+    <!-- Cart Summary -->
+    <div id="cart-summary" aria-labelledby="cart-summary-header">
+      <h2 id="cart-summary-header">Cart Summary</h2>
+      <div id="cart-items"></div>
+      <p><strong>Total:</strong> <span id="total-price" aria-live="assertive"></span></p>
+    </div>
+
+    <!-- Shipping Information -->
+    <form id="checkout-form" aria-describedby="checkout-form-description">
+      <p id="checkout-form-description">Please enter your shipping information and select a payment method to complete your purchase.</p>
+
+      <h2>Shipping Information</h2>
+      <label for="full-name">Full Name:</label>
+      <input type="text" id="full-name" required aria-required="true" placeholder="John Doe" aria-label="Full Name">
+
+      <label for="address">Shipping Address:</label>
+      <input type="text" id="address" required aria-required="true" placeholder="123 Main St" aria-label="Shipping Address">
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required aria-required="true" placeholder="example@email.com" aria-label="Email Address">
+
+      <!-- Payment Method -->
+      <h2>Payment Method</h2>
+      <fieldset>
+        <legend>Choose a payment method</legend>
+        <label for="credit-card">
+          <input type="radio" id="credit-card" name="payment-method" value="Credit Card" required aria-label="Credit Card">
+          Credit Card
+        </label>
+        <label for="paypal">
+          <input type="radio" id="paypal" name="payment-method" value="PayPal" required aria-label="PayPal">
+          PayPal
+        </label>
+        <label for="mobile-money">
+          <input type="radio" id="mobile-money" name="payment-method" value="Mobile Money" required aria-label="Mobile Money">
+          Mobile Money
+        </label>
+      </fieldset>
+
+      
+      <fieldset>
+        <legend>Shopping Summary</legend>
+        <p id="order-summary">Your cart is empty.</p>
+        <p class="total">Total: GHS <span id="totalPrice">0</span></p>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button type="submit" aria-label="Complete Checkout">Complete Checkout</button>
+    </form>
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
+
